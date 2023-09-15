@@ -1,0 +1,14 @@
+#VM#
+.venv/
+venv/
+macenv
+
+
+.instance/
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+*.sqlite3

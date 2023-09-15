@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link href="../static/register.css" rel="stylesheet" />
+    <script src="../static/CSE106FinalProjectBackend.js"></script>
+  </head>
+  <body>
+    <form>
+      <h1>Create your account</h1>
+
+      <div class="container-register">
+        <label for="username"> Username </label><br />
+        <input
+          type="text"
+          placeholder="Username"
+          name="username"
+          id="username"
+          required
+        /><br />
+
+        <label for="nicname"> Nickname </label><br />
+        <input
+          type="text"
+          placeholder="Nickname"
+          name="nickname"
+          id="nickname"
+          required
+        /><br />
+
+        <label for="password"> Password </label><br />
+        <input
+          type="text"
+          placeholder="Password"
+          id="password"
+          name="password"
+          required
+        /><br />
+
+        <label for="password"> Verify Password </label><br />
+        <input
+          type="text"
+          placeholder="Verify Password"
+          id="confirm"
+          name="confirm"
+          required
+        /><br />
+
+        <button id="sign-up-butt" type="button" onclick="register()">
+          Sign up</button
+        ><br />
+
+        <div id="demo"></div>
+      </div>
+    </form>
+  </body>
+</html>

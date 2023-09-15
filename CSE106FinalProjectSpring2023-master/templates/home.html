@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twatter</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" href="{{url_for('static',filename='favicon.ico') }}"/>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="../static/CSE106FinalProjectStyles.css" rel="stylesheet" />
+    <script src="../static/CSE106FinalProjectBackend.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6d61ab8c1d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    
+    <div class="container">
+      <div class="left-side">
+        <nav>
+          <ul>
+            <li>
+              <div class="home-image-div"><img class="home-image"src="/static/android-chrome-512x512.png" onclick="openHomePage()"></div>
+              <a href="#" onclick="openHomePage()"
+                ><i class="fa fa-home"></i>Home</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-bell"></i>Notifications</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-envelope"></i>Messages</a>
+            </li>
+            <div id="twitButton-div">
+              <button
+                id="twitButton"
+                type="button"
+                onclick="popout()"
+                title="Make a post"
+              >
+                <text id="twitButton-text">Post</text>
+              </button>
+            </div>
+          </ul>
+          <!-- The Modal -->
+          <div id="modalPost" class="createPost">
+            <!-- Modal content -->
+            <div class="createPost-modal-box">
+              <div class="closeModal" onclick="closeModal()" title="Close">
+                &times;
+              </div>
+              <div id="modal-content-spacers">
+                <div id="spacerModal"></div>
+                <div>
+                  <p>Creating a post...</p>
+                </div>
+                <div class="content-post-div">
+                  <textarea
+                  type="text";
+                    class="content-post"
+                    placeholder="What's happening?"
+                    name="content"
+                    id="content"
+                  ></textarea>
+                  <div class="post-button-div">
+                    <button id="post-button" type="button" onclick="post()">
+                      Post it!
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal content END -->
+          <div class="profile-view" onclick="profile('{{current_user.id}}')">
+            <div class="avatar"><img class ="profile-pic" src="/static/TwatterDefaultProfilePic.png"></div>
+            <div class="profile-text-info">
+              <div class="profile-name">{{ nickname }}</div>
+              <div class="profile-handle">@{{ username }}</div>
+            </div>
+          </div>
+          <div id="signOut-div">
+            <button id="signOut" onclick="logout()">
+              <text id="signOut-text">Sign Out</text>
+            </button>
+          </div>
+        </nav>
+      </div>
+      <div class="center">
+        <h1>Home</h1>
+        {% for post in posts %}
+        <div class="your-tweets-container">
+          <!-- Your tweets go here -->
+          <div class="tweet">
+            <div class="avatar"><img class ="profile-pic" src="/static/TwatterDefaultProfilePic.png"></div>
+
+            <div class="tweet-content">
+              <div>
+                <a href="#" onclick="profile('{{post.user.id}}')"><span class="username">{{ post.user.nickname }}</span></a><span class="handle">@{{post.user.username}}</span><span class="date">{{post.date.strftime(' · %h %d, %Y · %I:%M%p') }}</span>
+              </div>
+              <textarea class="message" rows="2" cols="60" contentEditable>{{ post.content }}</textarea>
+              <div class="actions">
+                <button class="action-button" onclick="popoutComment()">
+                  <i class="far fa-comment"></i>
+                </button>
+                
+                 <!-- The Comment Modal -->
+          <div id="modalComment" class="createComment">
+            <!-- Comment Modal content -->
+            
+            <div class="comment-modal-box">
+
+              <div class="closeCommentModal" onclick="closepopoutComment()" title="Close">
+              &times;
+            </div>
+              <div id="modal-content-spacers">
+              <!-- Comment 2 -->
+              <div class="avatar-div"><div class="avatar"><img class ="profile-pic" src="/static/TwatterDefaultProfilePic.png"></div>
+                <div class="commnet-div">
+                  <div class="profile-comment-info">
+                      <a href="#" onclick="profile('{{post.user.id}}')"><span class="username">{{ post.user.nickname }}</span></a><span class="handle">@{{post.user.username}}</span><span class="date">{{post.date.strftime(' · %h %d, %Y · %I:%M%p') }}</span>
+                  </div>
+                  <div class="comment-section" id="comment-section-{{ post.id }}">Empty</div> 
+                </div>
+              </div>
+              <div class="replying">
+                <div class="reply-textarea"><textarea class="comment" id="comment" rows="2" cols="20" contentEditable placeholder="Write your comment here..."></textarea> </div>
+              <div class="reply-button-div"><button class="reply-button" onclick="comment( {{post.id}} )">Reply</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+          <!-- Modal content END -->
+              
+
+                <button class="action-button" id="like-btn-{{ post.id }}" onclick="likepost({{ post.id }})">
+                  <i class="far fa-heart"></i> {{ post.likes }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="right-side">
+        <div class="search-div">
+          <img id="search-icon"src="/static/icons8-search-50.png">
+          <input type="search" class="search-bar" id="search-bar" placeholder="Search" />
+        </div>
+        <div class="search-result-box" id="search-result-box">
+        </div>
+        <h2>Trending</h2>
+        <ul>
+          <li>#Sports</li>
+          <li>#Entertainment</li>
+          <li>#Twatter</li>
+        </ul>
+      </div>
+    </div>
+    
+  </body>
+
+</html>

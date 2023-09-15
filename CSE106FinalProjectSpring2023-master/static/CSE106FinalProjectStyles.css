@@ -1,0 +1,1055 @@
+/*Round post button*/
+#twitButton-round {
+  border-radius: 100px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 28px;
+  background-color: rgb(29, 155, 240);
+  width: 75px;
+  height: 75px;
+  border-width: 0px;
+}
+/*Post button*/
+#twitButton {
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 2px;
+  background-color: rgb(29, 155, 240);
+  width: 85%;
+  max-width: 128px;
+  height: 100%;
+  border-width: 0px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.5s, box-shadow 0.3s;
+}
+#twitButton:hover {
+  box-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.25);
+  background-color: rgb(19, 141, 223);
+}
+
+#twitButton-text {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+#twitButton-div {
+  padding: 1px;
+  height: 40px;
+  max-height: 100px;
+  text-align: center;
+}
+
+#twitButton:active {
+  background-color: rgb(255, 0, 0);
+  /* Styles for the container */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  white-space: nowrap;
+}
+
+/*signOut button*/
+#signOut {
+  border-radius: 14px;
+  background-color: rgb(29, 155, 240);
+  height: 36px;
+  max-width: 128px;
+  border-width: 0px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+#signOut:hover {
+  box-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.25);
+  background-color: rgb(19, 141, 223);
+}
+
+#signOut-text {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+#signOut-div {
+  padding: 1px;
+  height: 40px;
+  max-height: 100px;
+  text-align: center;
+  margin-bottom: auto;
+  bottom: 2.8%;
+  left: 3.4%;
+  position: fixed;
+}
+
+/* Styles for the left-side navigation */
+.left-side {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 1%;
+  width: 14%;
+  min-width: 13%;
+  height: 100%;
+  background-color: #f5f8fa;
+  padding: 18px;
+  padding-left: 0px;
+  margin: 0px;
+  font-size: 28px;
+}
+
+.left-side nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.left-side nav li {
+  margin-bottom: 10px;
+}
+
+.left-side nav a {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  padding-right: 0px;
+}
+.left-side nav a:hover {
+  background: rgb(51, 51, 51, 0.2);
+  width: 94%;
+  border-radius: 20px;
+}
+
+.left-side nav a i {
+  margin-right: 10px;
+}
+.home-image-div {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  border-radius: 15px;
+  padding: 8px;
+  border-radius: 30px;
+}
+.home-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.home-image-div:hover {
+  background: rgb(51, 51, 51, 0.2);
+  border-radius: 45px;
+}
+.profile-view {
+  /* vertical-align: bottom; */
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  width: 11.5%;
+  bottom: 6%;
+  left: 1.8%;
+  position: fixed;
+  padding: 10px;
+  padding-left: 19px;
+  padding-bottom: 14px;
+  margin: 0px;
+  margin-bottom: 20px;
+}
+.profile-view:hover {
+  background: rgb(51, 51, 51, 0.13);
+  border-radius: 20px;
+}
+
+.profile-avatar-follow-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-text-info {
+  margin-top: 4px;
+  margin-left: 5px;
+
+  flex-direction: column;
+  font-weight: 800;
+}
+
+.profile-handle {
+  font-size: 18px;
+  color: #7c7c7c;
+}
+.follow-button {
+  width: 114px;
+  height: 44px;
+  background-color: rgb(215, 219, 220);
+  border-radius: 100px;
+  margin-top: auto;
+  margin-left: auto;
+  font-size: 17px;
+  border: 0.1px solid black;
+  transition: box-shadow 0.15s;
+  font-weight: 800;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+
+/* .follow-button:hover span {
+  display: none;
+} */
+
+/* .follow-button:hover::before {
+  content: "Unfollow";
+}
+*/
+/* .follow-button:hover {
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+  background-color: rgba(206, 0, 0, 0.27);
+  color: rgb(255, 0, 0);
+  border: 1.5px solid red;
+  font-size: 17px;
+  font-weight: 860;
+} */
+
+.follow-button:hover {
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+  background-color: rgb(184, 188, 189);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  font-size: 17px;
+  font-weight: 860;
+}
+
+.follower-div {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: row;
+}
+.following-number-div {
+  display: flex;
+  font-size: 19px;
+  margin-right: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.followers-number-div {
+  display: flex;
+  font-size: 19px;
+  cursor: pointer;
+}
+.following-number-div:hover,
+.followers-number-div:hover {
+  text-decoration: 1.2px underline;
+  text-underline-offset: 2px;
+}
+
+.following-number {
+  font-weight: bold;
+}
+.following-text {
+  color: #999;
+}
+/* Styles for the center section */
+.center {
+  display: inline-block;
+  width: 55%;
+  padding: 20px;
+  margin: auto;
+  /* padding-left: 200px; */
+}
+
+.tweet {
+  display: flex;
+  /* margin-bottom: 20px; */
+  padding: 7px;
+  padding-bottom: 10px;
+  border: 0.1px solid rgb(0, 0, 0, 0.9);
+  width: 100%;
+  min-height: 5em;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+
+  margin-right: 10px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.profile-pic {
+  object-fit: contain;
+  width: 101%;
+  height: 101%;
+  border-radius: 50%;
+  background-color: rgba(245, 245, 245, 0.95);
+}
+
+#avatar-profile-view {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 10px;
+  flex-shrink: 0;
+  margin-bottom: 20px;
+}
+
+.tweet-content {
+  flex: 1;
+}
+
+.username {
+  font-weight: bold;
+  margin-right: 6px;
+  font-size: 22px;
+}
+
+.handle {
+  color: rgb(63, 63, 63);
+  font-size: 18px;
+}
+
+#profile-handle {
+}
+.date {
+  font-size: 16px;
+  color: rgb(63, 63, 63, 0.9);
+}
+
+.message {
+  margin-top: 5px;
+  margin-bottom: 6px;
+  overflow-y: auto;
+  word-break: break-all;
+  word-wrap: break-word;
+  width: 94%;
+  resize: vertical;
+  border: none;
+  font-family: arial, sans-serif;
+  font-size: 16px;
+}
+
+.actions {
+  display: flex;
+}
+
+.actions span {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  color: #999;
+  width: 100%;
+}
+
+.actions span i {
+  margin-right: 5px;
+}
+
+/* Styles for the right-side trending section */
+.right-side {
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  right: 1%;
+  bottom: 0;
+  width: 18%;
+  background-color: #f5f8fa;
+  padding: 20px;
+  font-size: 24px;
+}
+
+.right-side h2 {
+  margin-top: 0;
+}
+
+.right-side ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.right-side li {
+  margin-bottom: 10px;
+  color: #999;
+}
+.search-div {
+  display: flex;
+  flex-direction: row;
+  min-width: 105px;
+  background-color: rgb(51, 51, 51, 14%);
+  border-radius: 20px;
+  width: 82%;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+#search-profile-pic {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  margin-top: 4px;
+  margin-right: 7px;
+}
+/* .search-div:focus {
+  border: 2px solid red;
+} */
+
+.search-div:focus-within {
+  outline: 1.1px solid rgb(255, 91, 86, 0.9);
+}
+
+#search-icon {
+  margin: 7px 0px 0px 8px;
+  font-size: 17px;
+  height: 22px;
+  width: 22px;
+}
+.search-bar {
+  border: none;
+  margin-left: 4px;
+  margin-bottom: 0px;
+  margin-top: 3px;
+  background-color: rgb(0, 0, 0, 0);
+  height: 30px;
+  padding-top: 0px;
+  padding-left: 4px;
+  width: 84%;
+  border-radius: 20px;
+  overflow: visible;
+}
+
+.search-bar:active,
+.search-bar:focus {
+  border: none;
+  outline: none;
+}
+
+.search-bar:placeholder-shown {
+  color: rgb(0, 0, 0, 0.9);
+  font-size: 16px;
+}
+
+.search-bar[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 1.25em;
+  width: 1.25em;
+  border-radius: 50em;
+  background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg)
+    no-repeat 50% 50%;
+  background-size: contain;
+  margin-left: 7px;
+}
+
+.search-result-box {
+  margin-top: 1px;
+  top: 0px;
+  min-width: 105px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 12px;
+  width: 95%;
+  box-shadow: 1px 1px#a7a7a7;
+  margin-left: -7px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.search-result-box ul {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding-left: 3px;
+  margin-left: 3px;
+  padding-right: 7px;
+  min-width: 0;
+  max-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-result-box ul::-webkit-scrollbar-track {
+  border: 1px solid #000;
+  padding: 2px 0;
+  background-color: #ff0000;
+}
+
+.search-result-box ul li {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+.search-result-box ul li span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.search-result-box ul li:hover {
+  background: rgb(153, 153, 153, 0.13);
+  border-radius: 10px;
+}
+#sign-in-butt {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+
+  background: #4c6ec4;
+  color: white;
+  border-radius: 10px;
+  border-width: 1.5px;
+  width: 250px;
+  -webkit-text-size-adjust: 100%;
+}
+.floating-text-div,
+.floating-text-div1 {
+  position: relative;
+  margin-bottom: 20px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.floating-reg-div {
+  position: relative;
+  margin-bottom: 20px;
+  margin-left: 0;
+  padding-left: 0;
+}
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+  top: -18px;
+  left: 4px;
+  font-size: 14px;
+  opacity: 1;
+  /* margin-bottom: 20px; */
+}
+
+.inputText {
+  font-size: 14px;
+  width: 220px;
+  height: 35px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 12px;
+  top: 8.5px;
+  transition: 0.18s ease all;
+  font-size: 18px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#background-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #dbe2f3;
+  margin: auto;
+  width: 800px;
+  height: 450px;
+  border: 1.2px solid #354f8f;
+  padding: 2px 10px 10px 10px;
+  margin-top: 69px;
+  border-radius: 10px;
+}
+#login-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 62px;
+}
+.username-login-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 68px;
+}
+
+.password-login-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 70px;
+}
+
+#top-menu {
+  margin: 1px;
+  padding: 1px;
+  margin-top: 10px;
+  padding-top: 0px;
+  margin-bottom: 65px;
+}
+
+#sign-in-banner-text {
+  font-family: "Calibri";
+  font-weight: normal;
+  font-size: 30px;
+  margin-top: 5px;
+  padding-top: 0px;
+}
+#register-butt {
+  margin-top: 5px;
+  padding: 5px;
+  background: rgb(76, 110, 196, 65%);
+  color: white;
+  border-radius: 10px;
+  border-width: 1.5px;
+  width: 100px;
+  -webkit-text-size-adjust: 100%;
+  justify-content: center;
+}
+.container-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  background-color: rgba(0, 0, 0, 0.45);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  height: 550px;
+  padding: 0px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.container-register input[type="text"],
+.container-register input[type="password"] {
+  width: 250px; /* set the width to 100% */
+  max-width: 300px; /* set the maximum width of the input fields */
+  border: 1px solid grey;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  height: 40px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.container-register button {
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  background-color: rgba(0, 68, 255, 0.322);
+  border: 1px solid grey;
+  font-size: 20px;
+  width: 18%;
+  min-width: 50px;
+  height: 34px;
+  /* margin-left: 20px; */
+}
+#demo {
+  position: relative;
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
+#sign-out-butt {
+  display: inline;
+  float: right;
+  text-align: right;
+  margin-right: 2%;
+}
+
+h1 {
+  font-family: "Calibri";
+  font-size: 35px;
+}
+
+h3 {
+  font-family: "Calibri";
+  font-weight: normal;
+  font-size: 18px;
+  margin: auto;
+  display: inline-block;
+}
+
+input {
+  display: inline-block;
+  width: 160px;
+  height: 24px;
+  margin-right: 12px;
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+div {
+  font-size: 20px;
+}
+
+body {
+  margin-left: 1px;
+  font-family: "Calibri Light";
+  font-size: 15px;
+  padding: 1px;
+}
+
+#nav-courses {
+  display: flex;
+}
+
+#whole-view {
+  display: inline-block;
+  justify-content: center;
+  margin-top: 30px;
+  margin-left: 50px;
+  /* padding: 50px; */
+}
+
+#course-viewer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: rgb(76, 110, 196);
+  margin: 0px;
+  padding: 0px;
+  height: 300px;
+  width: 700px;
+}
+
+#your-courses {
+  margin: 0px;
+  padding: 0px;
+  justify-content: center;
+  background-color: rgb(181, 198, 231);
+  height: 40px;
+  width: 350px;
+  border-width: 1px;
+  font-weight: bold;
+}
+
+#your-courses:active {
+  background-color: rgb(76, 110, 196);
+  color: rgb(255, 255, 255);
+}
+
+#add-courses {
+  margin: 0px;
+  padding: 0px;
+  justify-content: center;
+  background-color: rgb(181, 198, 231);
+  height: 40px;
+  width: 350px;
+  border-width: 1px;
+  font-weight: bold;
+}
+
+#add-courses:active {
+  background-color: rgb(76, 110, 196);
+  color: rgb(255, 255, 255);
+}
+
+#your-courses-viewer {
+  justify-content: center;
+}
+
+/*pop up when clicking the twitbutton (background of modal) */
+.createPost {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  /* padding-top: 100px; */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/*The background box that pops-up when creating a post*/
+.createPost-modal-box {
+  background-color: #fefefe;
+  margin: auto;
+  margin-top: 15%;
+  border: 1px solid #888;
+  width: 30%;
+  height: 100%;
+  min-height: 265px;
+  max-height: 300px;
+  border-radius: 10px;
+  min-width: 400px;
+}
+
+#modal-content-spacers {
+  margin-left: 1rem;
+}
+
+/* The Close 
+ for the modal/pop-up when making a post*/
+.closeModal {
+  color: #aaaaaa;
+  width: 25px;
+  height: fit-content;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 6px;
+  margin-top: 2px;
+  border-radius: 100px;
+  padding-left: 2.5px;
+  padding-right: 2.5px;
+  padding-top: 0px;
+  padding-bottom: 0.3px;
+}
+
+#closemodalRegister {
+  margin-right: auto;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.closeModal:hover,
+.closeModal:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  border-radius: 100px;
+}
+
+/*text box/input in the modal/pop-up*/
+.content-post {
+  border-width: 0.1px;
+  width: 95%;
+  text-align: left;
+  padding-bottom: 5rem;
+  overflow-y: visible;
+  white-space: nowrap;
+  word-wrap: break-word;
+  word-break: break-all;
+  resize: vertical;
+  font-family: arial, sans-serif;
+  font-size: 16px;
+}
+.content-post:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: rgb(173, 216, 230, 0.1);
+}
+
+.content-post-div {
+  margin: 5px;
+  padding-left: 5px;
+  height: 80%;
+  width: 90%;
+  padding-bottom: 10px;
+  padding-right: 0px;
+}
+
+.post-button-div {
+  padding-top: 18px;
+  float: right;
+}
+
+/*The "Post it" button in the modal pop-up*/
+#post-button {
+  padding: 0px;
+  margin: 0px;
+  background-color: rgb(29, 155, 240);
+  color: white;
+  border-radius: 20px;
+  border-width: 0px;
+  width: 10%;
+  min-width: 80px;
+  height: 36px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.5s, box-shadow 0.15s;
+}
+
+/*when pressing/hoving the "Post it" button in the modal*/
+#post-button:hover {
+  background-color: rgb(20, 136, 214);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+#post-button:active {
+  background: rgba(76, 110, 196, 0.6);
+}
+
+.profile-info-div {
+}
+#profile-name-view {
+  font-size: 35px;
+}
+
+#profile-handle-view {
+  font-size: 18px;
+}
+
+.your-tweets-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1px;
+  padding: 5px;
+  padding-top: 1%;
+  padding-bottom: 20px;
+  /* border: 0.1px solid rgb(0, 0, 0, 0.9); */
+  width: 90%;
+}
+.profile-nav-div {
+  padding-top: 3%;
+  padding-bottom: 0px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+.profile-nav {
+  display: flex;
+  flex-direction: row;
+  font-size: 22px;
+  text-align: center;
+  padding: 0px;
+}
+.profile-nav li {
+  flex: 1;
+  list-style: none;
+  display: inline;
+  padding-right: 10px;
+}
+
+.profile-nav li a {
+  width: 100px;
+}
+.profile-nav li a {
+  text-decoration: none;
+}
+.profile-nav li a:active,
+.profile-nav li a:visited {
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+.profile-nav li a:hover {
+  padding: 12px;
+  background-color: rgb(0, 0, 0, 10%);
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.comment-section {
+  /* display: none; */
+}
+.comment-modal-box {
+  background-color: #fefefe;
+  margin: auto;
+  margin-top: 15%;
+  border: 1px solid #888;
+  width: 50%;
+  height: 100%;
+  min-height: 265px;
+  max-height: 300px;
+  border-radius: 10px;
+  min-width: 400px;
+  overflow-y: auto;
+  padding: 40px;
+}
+
+.closeCommentModal {
+  position: fixed;
+  color: #000000;
+  width: 25px;
+  height: fit-content;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+.createComment {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  /* padding-top: 100px; */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content-comment-spacers {
+  padding: 30px;
+  margin: 30px;
+}
+.avatar-div {
+  display: flex;
+  margin-bottom: 20px;
+}
+.commnet-div {
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+.profile-comment-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.profile-comment-info {
+}
+.comment-content-div {
+  width: 100%;
+}
+.comment-section {
+  width: 100%;
+}
+.replying {
+  display: flex;
+  flex-direction: column;
+}
+.comment {
+  margin-top: 5px;
+  margin-bottom: 6px;
+  overflow-y: auto;
+  word-break: break-all;
+  word-wrap: break-word;
+  width: 94%;
+  resize: vertical;
+  font-family: arial, sans-serif;
+  font-size: 16px;
+}
+.reply-button-div {
+  margin-left: auto;
+}
+
+.reply-button {
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 2px;
+  background-color: rgb(29, 155, 240);
+  width: 85%;
+  max-width: 128px;
+  height: 100%;
+  border-width: 0px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.5s, box-shadow 0.3s;
+  width: 100%;
+}
+.reply-button:hover {
+  box-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.25);
+  background-color: rgb(19, 141, 223);
+}
+.reply-textarea {
+  width: 100%;
+}

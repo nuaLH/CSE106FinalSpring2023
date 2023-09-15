@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twatter Login</title> 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" href="{{url_for('static',filename='favicon.ico') }}"/>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="../static/CSE106FinalProjectStyles.css" rel="stylesheet" />
+    <link href="../static/register.css" rel="stylesheet" />   <script
+    src="https://kit.fontawesome.com/6d61ab8c1d.js"
+    crossorigin="anonymous"
+  ></script>
+
+    <script src="../static/CSE106FinalProjectBackend.js"></script>
+    
+  </head>
+
+  <body>
+    <div id="background-app">
+      <div id="top-menu">
+        <h1 id="sign-in-banner-text">Sign in to Twatter</h1>
+      </div>
+      <div id="login-center">
+        <div class="username-login-div">
+          <div class="floating-text-div">
+            <input type="text" class="inputText" id="username" required />
+            <span class="floating-label">Username</span>
+          </div>
+          <div class="floating-text-div1">
+            <input type="password" class="inputText" id="password" required />
+            <span class="floating-label">Password</span>
+          </div>
+        </div>
+      </div>
+      <button id="sign-in-butt" type="button" onclick="login()">Log in</button>
+      <div id="demo"></div>
+      <button id="register-butt" type="button" onclick="popoutRegister()">
+        Register
+      </button>
+
+      <!-- The Modal for registering an account -->
+      <div id="modalRegister" class="createPost">
+        <!-- Modal content -->
+        <div class="register-modal-box">
+          <form>
+            <div class="container-register">
+              <div
+                class="closeModal"
+                id="closemodalRegister"
+                onclick="closemodalRegister()"
+                title="Close"
+              >
+                &times;
+              </div>
+              <h1>Create your account</h1>
+
+              <div class="floating-reg-div">
+                <input
+                  type="text"
+                  class="inputText"
+                  name="username-reg"
+                  id="username-reg"
+                  required
+                />
+                <span class="floating-label">Username</span>
+              </div>
+              <div class="floating-reg-div">
+                <input
+                  type="text"
+                  class="inputText"
+                  name="nickname-reg"
+                  id="nickname-reg"
+                  required
+                />
+                <span class="floating-label">Nickname</span>
+              </div>
+              <div class="floating-reg-div">
+                <input
+                  type="text"
+                  class="inputText"
+                  id="password-reg"
+                  name="password-reg"
+                  required
+                />
+                <span class="floating-label">Password</span>
+              </div>
+              <div class="floating-reg-div">
+                <input
+                  type="text"
+                  class="inputText"
+                  id="confirm"
+                  name="confirm"
+                  required
+                />
+                <span class="floating-label">Verify Password</span>
+              </div>
+              <button id="sign-up-butt" type="button" onclick="register()">
+                Sign up</button
+              ><br />
+              <div id="demo1"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Modal content END -->
+    </div>
+    <script>
+      // Execute a function when the user presses a key on the keyboard
+      document
+        .getElementById("password")
+        .addEventListener("keyup", function (event) {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("sign-in-butt").click();
+          }
+        });
+    </script>
+  </body>
+</html>
